@@ -57,7 +57,7 @@ const Platform = () => {
         <div className="container-narrow mx-auto px-4 md:px-6 text-center">
           <SectionHeading
             badge="Platform"
-            title="The Vltronix Enterprise Cloud"
+            title="The veltronyx Enterprise Cloud"
             description="A unified, intelligent platform that integrates ERP, HR, and ESG into a single source of truth for your enterprise."
           />
         </div>

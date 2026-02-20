@@ -11,7 +11,7 @@ const fadeInUp = {
 };
 
 const leaders = [
-  { name: "Sarah Chen", role: "CEO & Co-Founder", initials: "SC" },
+  { name: "Lav Patel", role: "CEO & Co-Founder", initials: "LP" },
   { name: "Marcus Weber", role: "CTO", initials: "MW" },
   { name: "Priya Sharma", role: "Chief Product Officer", initials: "PS" },
   { name: "James Okonkwo", role: "Chief Revenue Officer", initials: "JO" },
@@ -31,7 +31,7 @@ const About = () => {
       <section className="bg-surface section-padding">
         <div className="container-narrow mx-auto px-4 md:px-6 text-center">
           <SectionHeading
-            badge="About Vltronix"
+            badge="About veltronyx"
             title="Building the Future of Enterprise Software"
             description="We're on a mission to make enterprise operations intelligent, sustainable, and unified."
           />
@@ -67,7 +67,7 @@ const About = () => {
       {/* Values */}
       <section className="bg-surface section-padding">
         <div className="container-narrow mx-auto px-4 md:px-6">
-          <SectionHeading badge="Values" title="Why Vltronix" description="The principles that guide everything we build." />
+          <SectionHeading badge="Values" title="Why veltronyx" description="The principles that guide everything we build." />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
               <motion.div
