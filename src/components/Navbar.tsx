@@ -23,7 +23,7 @@ const Navbar = () => {
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">V</span>
           </div>
-          <span className="text-xl font-bold text-foreground">Veltrix</span>
+          <span className="text-xl font-bold text-foreground">Vltronix</span>
         </Link>
 
         {/* Desktop */}

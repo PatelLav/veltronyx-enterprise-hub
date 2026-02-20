@@ -43,7 +43,7 @@ const ESG = () => {
           <SectionHeading
             badge="ESG Compliance"
             title="Sustainability That Scales"
-            description="Veltrix ESG gives enterprises the tools to measure, manage, and report sustainability metrics with regulatory confidence."
+            description="Vltronix ESG gives enterprises the tools to measure, manage, and report sustainability metrics with regulatory confidence."
           />
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -51,7 +51,7 @@ const ESG = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mt-12 rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border"
           >
-            <img src={esgDashboard} alt="Veltrix ESG Dashboard" className="w-full" />
+            <img src={esgDashboard} alt="Vltronix ESG Dashboard" className="w-full" />
           </motion.div>
         </div>
       </section>

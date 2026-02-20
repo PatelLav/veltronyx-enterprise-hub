@@ -37,10 +37,10 @@ const Footer = () => {
               <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">
                 <span className="text-secondary-foreground font-bold text-sm">V</span>
               </div>
-              <span className="text-xl font-bold">Veltrix</span>
+              <span className="text-xl font-bold">Vltronix</span>
             </Link>
             <p className="text-sm text-dark-foreground/60 leading-relaxed">
-              Powering intelligent &amp; sustainable enterprises worldwide.
+              Powering intelligent & sustainable enterprises worldwide.
             </p>
           </div>
           {Object.entries(footerLinks).map(([category, links]) => (
@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-dark-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-dark-foreground/40">
-            © {new Date().getFullYear()} Veltrix. All rights reserved.
+            © {new Date().getFullYear()} Vltronix. All rights reserved.
           </p>
           <div className="flex gap-6">
             <span className="text-sm text-dark-foreground/40">SOC 2 Compliant</span>
