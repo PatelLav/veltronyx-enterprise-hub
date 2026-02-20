@@ -70,7 +70,7 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
             >
-              Veltrix unifies ERP, HR, and ESG into one intelligent enterprise platform.
+              Vltronix unifies ERP, HR, and ESG into one intelligent enterprise platform.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-16 md:mt-20 rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border"
           >
-            <img src={dashboardMockup} alt="Veltrix Enterprise Dashboard" className="w-full" />
+            <img src={dashboardMockup} alt="Vltronix Enterprise Dashboard" className="w-full" />
           </motion.div>
         </div>
       </section>
@@ -154,7 +154,7 @@ const Index = () => {
               <SectionHeading
                 badge="Benefits"
                 title="Built for Enterprise Scale"
-                description="Veltrix is designed for organizations that demand performance, security, and intelligence."
+                description="Vltronix is designed for organizations that demand performance, security, and intelligence."
                 centered={false}
               />
               <div className="grid sm:grid-cols-2 gap-4">
@@ -197,7 +197,7 @@ const Index = () => {
               Ready to Transform Your Enterprise?
             </h2>
             <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto mb-10">
-              Join 2,400+ enterprises using Veltrix to drive intelligent, sustainable operations.
+              Join 2,400+ enterprises using Vltronix to drive intelligent, sustainable operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
