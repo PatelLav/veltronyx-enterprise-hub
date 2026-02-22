@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Download, RotateCcw, HelpCircle, Leaf, Users, Shield } from "lucide-react";
 import { motion } from "framer-motion";
+import { generateESGPDF } from "@/lib/esg-pdf-generator";
 import {
   type EnvironmentalInputs,
   type SocialInputs,
@@ -145,6 +146,23 @@ const ESGCalculator = () => {
     setGov(defaultGov);
   };
 
+  const handleDownloadReport = async () => {
+    try {
+      await generateESGPDF({
+        envScore,
+        socialScore,
+        govScore,
+        overallScore,
+        env,
+        social,
+        gov,
+        scoreLabel: getScoreLabel(overallScore),
+      });
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+    }
+  };
+
   const updateEnv = (key: keyof EnvironmentalInputs) => (v: number) => setEnv((p) => ({ ...p, [key]: v }));
   const updateSocial = (key: keyof SocialInputs) => (v: number) => setSocial((p) => ({ ...p, [key]: v }));
   const updateGov = (key: keyof GovernanceInputs) => (v: number) => setGov((p) => ({ ...p, [key]: v }));
@@ -163,7 +181,7 @@ const ESGCalculator = () => {
                 Measure Environmental, Social, and Governance performance in real time.
               </p>
             </div>
-            <Button variant="outline" className="gap-2 shrink-0 self-start md:self-auto">
+            <Button variant="outline" className="gap-2 shrink-0 self-start md:self-auto" onClick={handleDownloadReport}>
               <Download className="h-4 w-4" />
               Download Report
             </Button>
