@@ -10,8 +10,28 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    middlewareMode: false,
   },
-  plugins: [react()].filter(Boolean),
+  plugins: [
+    {
+      name: "spa-fallback",
+      configureServer(server) {
+        return () => {
+          server.middlewares.use((req, res, next) => {
+            if (req.url === "/" || req.url.startsWith("/.")) {
+              next();
+            } else if (!req.url.includes(".")) {
+              req.url = "/";
+              next();
+            } else {
+              next();
+            }
+          });
+        };
+      },
+    },
+    react(),
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
