@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Platform", href: "/platform" },
+  { label: "ERP", href: "/erp" },
+  { label: "HR", href: "/hr" },
   { label: "ESG", href: "/esg" },
   { label: "ESG Calculator", href: "/esg-calculator" },
   { label: "Pricing", href: "/pricing" },
