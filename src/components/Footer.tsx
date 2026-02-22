@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const footerLinks = {
   Platform: [
-    { label: "ERP Module", href: "/platform" },
-    { label: "HR Module", href: "/platform" },
+    { label: "ERP Module", href: "/erp" },
+    { label: "HR Module", href: "/hr" },
     { label: "ESG Module", href: "/esg" },
     { label: "Security", href: "/platform" },
   ],
