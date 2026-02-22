@@ -3,12 +3,14 @@ import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { ContactDialog } from "@/components/ContactDialog";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
 const Contact = () => {
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,6 +27,7 @@ const Contact = () => {
 
   return (
     <Layout>
+      <ContactDialog open={contactDialogOpen} onOpenChange={setContactDialogOpen} />
       <section className="bg-surface section-padding">
         <div className="container-narrow mx-auto px-4 md:px-6">
           <SectionHeading
@@ -138,7 +141,11 @@ const Contact = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   For organizations with 1,000+ employees, contact our enterprise team for custom solutions.
                 </p>
-                <Button variant="hero-outline" size="sm">
+                <Button 
+                  variant="hero-outline" 
+                  size="sm"
+                  onClick={() => setContactDialogOpen(true)}
+                >
                   Contact Enterprise Sales
                 </Button>
               </div>
