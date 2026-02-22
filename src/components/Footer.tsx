@@ -1,18 +1,7 @@
 import { Link } from "react-router-dom";
 
 const footerLinks = {
-  Platform: [
-    { label: "ERP Module", href: "/erp" },
-    { label: "HR Module", href: "/hr" },
-    { label: "ESG Module", href: "/esg" },
-    { label: "Security", href: "/platform" },
-  ],
-  Company: [
-    { label: "About Us", href: "/about" },
-    { label: "Careers", href: "/about" },
-    { label: "Contact", href: "/contact" },
-    { label: "Blog", href: "/blog" },
-  ],
+  
   Resources: [
     { label: "Documentation", href: "/" },
     { label: "API Reference", href: "/" },
@@ -24,6 +13,18 @@ const footerLinks = {
     { label: "Terms of Service", href: "/" },
     { label: "Cookie Policy", href: "/" },
     { label: "GDPR", href: "/" },
+  ],
+  Platform: [
+    { label: "ERP Module", href: "/erp" },
+    { label: "HR Module", href: "/hr" },
+    { label: "ESG Module", href: "/esg" },
+    { label: "Security", href: "/platform" },
+  ],
+  Company: [
+    { label: "About Us", href: "/about" },
+    { label: "Careers", href: "/about" },
+    { label: "Contact", href: "/contact" },
+    { label: "Blog", href: "/blog" },
   ],
 };
 
@@ -43,23 +44,31 @@ const Footer = () => {
               Powering intelligent & sustainable enterprises worldwide.
             </p>
           </div>
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="font-semibold text-sm mb-4">{category}</h4>
-              <ul className="space-y-2.5">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      to={link.href}
-                      className="text-sm text-dark-foreground/60 hover:text-dark-foreground transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {Object.entries(footerLinks).map(([category, links]) => {
+            // Hide Company and Resources sections
+            if (category === "Legal" || category === "Resources") {
+              return (
+                <div key={category}></div>
+              );
+            }
+            return (
+              <div key={category}>
+                <h4 className="font-semibold text-sm mb-4">{category}</h4>
+                <ul className="space-y-2.5">
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        to={link.href}
+                        className="text-sm text-dark-foreground/60 hover:text-dark-foreground transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
         <div className="border-t border-dark-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-dark-foreground/40">
