@@ -75,9 +75,9 @@ const Footer = () => {
             © {new Date().getFullYear()} veltronyx. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <span className="text-sm text-dark-foreground/40">SOC 2 Compliant</span>
+            {/* <span className="text-sm text-dark-foreground/40">SOC 2 Compliant</span>
             <span className="text-sm text-dark-foreground/40">ISO 27001</span>
-            <span className="text-sm text-dark-foreground/40">GDPR Ready</span>
+            <span className="text-sm text-dark-foreground/40">GDPR Ready</span> */}
           </div>
         </div>
       </div>
