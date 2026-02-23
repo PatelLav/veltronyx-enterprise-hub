@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoDark from "@/assets/logo-dark.svg";
 
 const navLinks = [
   { label: "Platform", href: "/platform" },
@@ -28,10 +29,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-border">
       <div className="container-narrow mx-auto flex items-center justify-between h-16 px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">V</span>
-          </div>
-          <span className="text-xl font-bold text-foreground">veltronyx</span>
+          <img src={logoDark} alt="Veltronyx" className="h-8" />
         </Link>
 
         {/* Desktop */}

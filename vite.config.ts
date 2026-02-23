@@ -1,6 +1,7 @@
-import { defineConfig } from "vite";
+import { defineConfig, type ViteDevServer } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import type { IncomingMessage, ServerResponse } from "http";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -15,12 +16,13 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     {
       name: "spa-fallback",
-      configureServer(server) {
+      configureServer(server: ViteDevServer) {
         return () => {
-          server.middlewares.use((req, res, next) => {
-            if (req.url === "/" || req.url.startsWith("/.")) {
+          server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: () => void) => {
+            const url = req.url || "/";
+            if (url === "/" || url.startsWith("/.")) {
               next();
-            } else if (!req.url.includes(".")) {
+            } else if (!url.includes(".")) {
               req.url = "/";
               next();
             } else {

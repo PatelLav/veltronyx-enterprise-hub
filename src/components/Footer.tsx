@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoLight from "@/assets/logo-light.svg";
 
 const footerLinks = {
   
@@ -35,10 +36,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold text-sm">V</span>
-              </div>
-              <span className="text-xl font-bold">veltronyx</span>
+              <img src={logoLight} alt="Veltronyx" className="h-8" />
             </Link>
             <p className="text-sm text-dark-foreground/60 leading-relaxed">
               Powering intelligent & sustainable enterprises worldwide.
