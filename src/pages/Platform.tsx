@@ -2,9 +2,16 @@ import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
 import { BarChart3, Users, Leaf, Shield, Server, Lock, Layers, Database, FileCheck, TrendingUp, Settings, Globe } from "lucide-react";
-import erpModule from "@/assets/erp-module.png";
-import hrModule from "@/assets/hr-module.png";
-import esgModule from "@/assets/esg-module.png";
+import DashboardCarousel, { type CarouselSlide } from "@/components/DashboardCarousel";
+import dashboard1 from "@/assets/dashboard-1.jpg";
+import erpSlide1 from "@/assets/erp-slide-1.jpg";
+import erpSlide2 from "@/assets/erp-slide-2.jpg";
+import dashboard2 from "@/assets/dashboard-2.jpg";
+import hrSlide1 from "@/assets/hr-slide-1.jpg";
+import hrSlide2 from "@/assets/hr-slide-2.jpg";
+import dashboard3 from "@/assets/dashboard-3.jpg";
+import esgSlide1 from "@/assets/esg-slide-1.jpg";
+import esgSlide2 from "@/assets/esg-slide-2.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
