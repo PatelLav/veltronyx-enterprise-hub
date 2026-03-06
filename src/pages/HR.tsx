@@ -4,7 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Users, UserPlus, GraduationCap, Heart, Award, TrendingUp, ArrowRight, BarChart3, Shield } from "lucide-react";
-import hrModule from "@/assets/hr-module.png";
+import DashboardCarousel from "@/components/DashboardCarousel";
+import dashboard2 from "@/assets/dashboard-2.jpg";
+import hrSlide1 from "@/assets/hr-slide-1.jpg";
+import hrSlide2 from "@/assets/hr-slide-2.jpg";
+
+const hrSlides = [
+  { src: dashboard2, alt: "HR Management Overview" },
+  { src: hrSlide1, alt: "Recruitment & Applicant Tracking" },
+  { src: hrSlide2, alt: "Performance Review Dashboard" },
+];
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -49,9 +58,9 @@ const HR = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-12 rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border"
+            className="mt-12"
           >
-            <img src={hrModule} alt="veltronyx HR Dashboard" className="w-full" />
+            <DashboardCarousel slides={hrSlides} />
           </motion.div>
         </div>
       </section>

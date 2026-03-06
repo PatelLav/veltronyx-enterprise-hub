@@ -4,7 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BarChart3, DollarSign, Package, Truck, Settings, TrendingUp, ArrowRight, Layers, Database, LineChart } from "lucide-react";
-import erpModule from "@/assets/erp-module.png";
+import DashboardCarousel from "@/components/DashboardCarousel";
+import dashboard1 from "@/assets/dashboard-1.jpg";
+import erpSlide1 from "@/assets/erp-slide-1.jpg";
+import erpSlide2 from "@/assets/erp-slide-2.jpg";
+
+const erpSlides = [
+  { src: dashboard1, alt: "ERP Overview Dashboard" },
+  { src: erpSlide1, alt: "Financial Management & General Ledger" },
+  { src: erpSlide2, alt: "Supply Chain Management" },
+];
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -49,9 +58,9 @@ const ERP = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-12 rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border"
+            className="mt-12"
           >
-            <img src={erpModule} alt="veltronyx ERP Dashboard" className="w-full" />
+            <DashboardCarousel slides={erpSlides} />
           </motion.div>
         </div>
       </section>
