@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BarChart3, DollarSign, Package, Truck, Settings, TrendingUp, ArrowRight, Layers, Database, LineChart } from "lucide-react";
 import DashboardCarousel from "@/components/DashboardCarousel";
-import dashboard1 from "@/assets/dashboard-1.jpg";
 import erpSlide1 from "@/assets/erp-slide-1.jpg";
 import erpSlide2 from "@/assets/erp-slide-2.jpg";
+import erpSlide3 from "@/assets/erp-slide-3.jpg";
 
 const erpSlides = [
-  { src: dashboard1, alt: "ERP Overview Dashboard" },
   { src: erpSlide1, alt: "Financial Management & General Ledger" },
   { src: erpSlide2, alt: "Supply Chain Management" },
+  { src: erpSlide3, alt: "Procurement & Vendor Management" },
 ];
 
 const fadeInUp = {
