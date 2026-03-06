@@ -27,7 +27,11 @@ const modules = [
     subtitle: "Enterprise Resource Planning",
     description: "End-to-end visibility into financial operations, supply chain, procurement, and asset management.",
     features: ["Financial Management & GL", "Supply Chain Optimization", "Procurement & Vendor Management", "Asset Lifecycle Tracking", "Real-time Analytics & Reporting"],
-    image: erpModule,
+    slides: [
+      { src: dashboard1, alt: "ERP Overview" },
+      { src: erpSlide1, alt: "Financial Management" },
+      { src: erpSlide2, alt: "Supply Chain" },
+    ] as CarouselSlide[],
   },
   {
     icon: Users,
@@ -35,7 +39,11 @@ const modules = [
     subtitle: "Human Capital Management",
     description: "Comprehensive people management from recruitment to retirement, powered by AI insights.",
     features: ["Talent Acquisition & Onboarding", "Performance Management", "Compensation & Benefits", "Learning & Development", "Workforce Analytics"],
-    image: hrModule,
+    slides: [
+      { src: dashboard2, alt: "HR Overview" },
+      { src: hrSlide1, alt: "Recruitment Dashboard" },
+      { src: hrSlide2, alt: "Performance Review" },
+    ] as CarouselSlide[],
   },
   {
     icon: Leaf,
@@ -43,7 +51,11 @@ const modules = [
     subtitle: "Sustainability & Compliance",
     description: "Track, measure, and report on environmental, social, and governance metrics with regulatory confidence.",
     features: ["Carbon Footprint Tracking", "ESG Score Dashboard", "Regulatory Compliance Engine", "Sustainability Reporting", "Stakeholder Disclosure"],
-    image: esgModule,
+    slides: [
+      { src: dashboard3, alt: "ESG Overview" },
+      { src: esgSlide1, alt: "Governance Dashboard" },
+      { src: esgSlide2, alt: "Sustainability Reporting" },
+    ] as CarouselSlide[],
   },
 ];
 
@@ -99,9 +111,7 @@ const Platform = () => {
                 </ul>
               </div>
               <div className={`${i % 2 === 1 ? "md:order-1" : ""}`}>
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
-                  <img src={mod.image} alt={`${mod.title} Preview`} className="w-full h-full object-cover" />
-                </div>
+                <DashboardCarousel slides={mod.slides} />
               </div>
             </motion.div>
           ))}
