@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BarChart3, Users, Leaf, Shield, Zap, Globe, ArrowRight, CheckCircle2 } from "lucide-react";
-import dashboardMockup from "@/assets/dashboard-mockup.png";
+import DashboardCarousel from "@/components/DashboardCarousel";
 
 const features = [
   {
@@ -96,9 +96,9 @@ const Index = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-16 md:mt-20 rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border"
+            className="mt-16 md:mt-20"
           >
-            <img src={dashboardMockup} alt="veltronyx Enterprise Dashboard" className="w-full" />
+            <DashboardCarousel />
           </motion.div>
         </div>
       </section>
