@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Leaf, BarChart3, FileCheck, Globe, TrendingUp, Shield, ArrowRight } from "lucide-react";
 import DashboardCarousel from "@/components/DashboardCarousel";
-import dashboard3 from "@/assets/dashboard-3.jpg";
 import esgSlide1 from "@/assets/esg-slide-1.jpg";
 import esgSlide2 from "@/assets/esg-slide-2.jpg";
+import esgSlide3 from "@/assets/esg-slide-3.jpg";
 
 const esgSlides = [
-  { src: dashboard3, alt: "ESG Sustainability Overview" },
   { src: esgSlide1, alt: "Governance & Social Impact Dashboard" },
   { src: esgSlide2, alt: "Sustainability Reporting" },
+  { src: esgSlide3, alt: "Carbon Emissions Tracking" },
 ];
 
 const fadeInUp = {

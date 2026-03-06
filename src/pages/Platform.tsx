@@ -3,15 +3,15 @@ import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
 import { BarChart3, Users, Leaf, Shield, Server, Lock, Layers, Database, FileCheck, TrendingUp, Settings, Globe } from "lucide-react";
 import DashboardCarousel, { type CarouselSlide } from "@/components/DashboardCarousel";
-import dashboard1 from "@/assets/dashboard-1.jpg";
 import erpSlide1 from "@/assets/erp-slide-1.jpg";
 import erpSlide2 from "@/assets/erp-slide-2.jpg";
-import dashboard2 from "@/assets/dashboard-2.jpg";
+import erpSlide3 from "@/assets/erp-slide-3.jpg";
 import hrSlide1 from "@/assets/hr-slide-1.jpg";
 import hrSlide2 from "@/assets/hr-slide-2.jpg";
-import dashboard3 from "@/assets/dashboard-3.jpg";
+import hrSlide3 from "@/assets/hr-slide-3.jpg";
 import esgSlide1 from "@/assets/esg-slide-1.jpg";
 import esgSlide2 from "@/assets/esg-slide-2.jpg";
+import esgSlide3 from "@/assets/esg-slide-3.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -28,9 +28,9 @@ const modules = [
     description: "End-to-end visibility into financial operations, supply chain, procurement, and asset management.",
     features: ["Financial Management & GL", "Supply Chain Optimization", "Procurement & Vendor Management", "Asset Lifecycle Tracking", "Real-time Analytics & Reporting"],
     slides: [
-      { src: dashboard1, alt: "ERP Overview" },
       { src: erpSlide1, alt: "Financial Management" },
       { src: erpSlide2, alt: "Supply Chain" },
+      { src: erpSlide3, alt: "Procurement" },
     ] as CarouselSlide[],
   },
   {
@@ -40,9 +40,9 @@ const modules = [
     description: "Comprehensive people management from recruitment to retirement, powered by AI insights.",
     features: ["Talent Acquisition & Onboarding", "Performance Management", "Compensation & Benefits", "Learning & Development", "Workforce Analytics"],
     slides: [
-      { src: dashboard2, alt: "HR Overview" },
       { src: hrSlide1, alt: "Recruitment Dashboard" },
       { src: hrSlide2, alt: "Performance Review" },
+      { src: hrSlide3, alt: "Learning & Development" },
     ] as CarouselSlide[],
   },
   {
@@ -52,9 +52,9 @@ const modules = [
     description: "Track, measure, and report on environmental, social, and governance metrics with regulatory confidence.",
     features: ["Carbon Footprint Tracking", "ESG Score Dashboard", "Regulatory Compliance Engine", "Sustainability Reporting", "Stakeholder Disclosure"],
     slides: [
-      { src: dashboard3, alt: "ESG Overview" },
       { src: esgSlide1, alt: "Governance Dashboard" },
       { src: esgSlide2, alt: "Sustainability Reporting" },
+      { src: esgSlide3, alt: "Carbon Emissions Tracking" },
     ] as CarouselSlide[],
   },
 ];

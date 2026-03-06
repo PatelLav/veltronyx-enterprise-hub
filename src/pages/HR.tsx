@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Users, UserPlus, GraduationCap, Heart, Award, TrendingUp, ArrowRight, BarChart3, Shield } from "lucide-react";
 import DashboardCarousel from "@/components/DashboardCarousel";
-import dashboard2 from "@/assets/dashboard-2.jpg";
 import hrSlide1 from "@/assets/hr-slide-1.jpg";
 import hrSlide2 from "@/assets/hr-slide-2.jpg";
+import hrSlide3 from "@/assets/hr-slide-3.jpg";
 
 const hrSlides = [
-  { src: dashboard2, alt: "HR Management Overview" },
   { src: hrSlide1, alt: "Recruitment & Applicant Tracking" },
   { src: hrSlide2, alt: "Performance Review Dashboard" },
+  { src: hrSlide3, alt: "Learning & Development" },
 ];
 
 const fadeInUp = {
