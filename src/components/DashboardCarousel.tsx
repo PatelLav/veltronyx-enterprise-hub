@@ -1,26 +1,25 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import dashboard1 from "@/assets/dashboard-1.jpg";
-import dashboard2 from "@/assets/dashboard-2.jpg";
-import dashboard3 from "@/assets/dashboard-3.jpg";
-import dashboard4 from "@/assets/dashboard-4.jpg";
 
-const slides = [
-  { src: dashboard1, alt: "ERP Analytics Dashboard" },
-  { src: dashboard2, alt: "HR Management Dashboard" },
-  { src: dashboard3, alt: "ESG Sustainability Dashboard" },
-  { src: dashboard4, alt: "Business Intelligence Dashboard" },
-];
+export interface CarouselSlide {
+  src: string;
+  alt: string;
+}
 
-const DashboardCarousel = () => {
+interface DashboardCarouselProps {
+  slides: CarouselSlide[];
+  interval?: number;
+}
+
+const DashboardCarousel = ({ slides, interval = 4000 }: DashboardCarouselProps) => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, interval);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length, interval]);
 
   return (
     <div className="relative w-full overflow-hidden rounded-xl border border-border shadow-2xl shadow-primary/10">
@@ -38,7 +37,6 @@ const DashboardCarousel = () => {
           />
         </AnimatePresence>
       </div>
-      {/* Dots */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {slides.map((_, i) => (
           <button

@@ -5,7 +5,17 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BarChart3, Users, Leaf, Shield, Zap, Globe, ArrowRight, CheckCircle2 } from "lucide-react";
 import DashboardCarousel from "@/components/DashboardCarousel";
+import dashboard1 from "@/assets/dashboard-1.jpg";
+import dashboard2 from "@/assets/dashboard-2.jpg";
+import dashboard3 from "@/assets/dashboard-3.jpg";
+import dashboard4 from "@/assets/dashboard-4.jpg";
 
+const heroSlides = [
+  { src: dashboard1, alt: "ERP Analytics Dashboard" },
+  { src: dashboard2, alt: "HR Management Dashboard" },
+  { src: dashboard3, alt: "ESG Sustainability Dashboard" },
+  { src: dashboard4, alt: "Business Intelligence Dashboard" },
+];
 const features = [
   {
     icon: BarChart3,
@@ -98,7 +108,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-16 md:mt-20"
           >
-            <DashboardCarousel />
+            <DashboardCarousel slides={heroSlides} />
           </motion.div>
         </div>
       </section>

@@ -4,7 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Leaf, BarChart3, FileCheck, Globe, TrendingUp, Shield, ArrowRight } from "lucide-react";
-import esgDashboard from "@/assets/esg-dashboard.png";
+import DashboardCarousel from "@/components/DashboardCarousel";
+import dashboard3 from "@/assets/dashboard-3.jpg";
+import esgSlide1 from "@/assets/esg-slide-1.jpg";
+import esgSlide2 from "@/assets/esg-slide-2.jpg";
+
+const esgSlides = [
+  { src: dashboard3, alt: "ESG Sustainability Overview" },
+  { src: esgSlide1, alt: "Governance & Social Impact Dashboard" },
+  { src: esgSlide2, alt: "Sustainability Reporting" },
+];
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -49,9 +58,9 @@ const ESG = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-12 rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border"
+            className="mt-12"
           >
-            <img src={esgDashboard} alt="veltronyx ESG Dashboard" className="w-full" />
+            <DashboardCarousel slides={esgSlides} />
           </motion.div>
         </div>
       </section>

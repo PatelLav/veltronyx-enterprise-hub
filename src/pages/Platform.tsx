@@ -2,9 +2,16 @@ import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
 import { BarChart3, Users, Leaf, Shield, Server, Lock, Layers, Database, FileCheck, TrendingUp, Settings, Globe } from "lucide-react";
-import erpModule from "@/assets/erp-module.png";
-import hrModule from "@/assets/hr-module.png";
-import esgModule from "@/assets/esg-module.png";
+import DashboardCarousel, { type CarouselSlide } from "@/components/DashboardCarousel";
+import dashboard1 from "@/assets/dashboard-1.jpg";
+import erpSlide1 from "@/assets/erp-slide-1.jpg";
+import erpSlide2 from "@/assets/erp-slide-2.jpg";
+import dashboard2 from "@/assets/dashboard-2.jpg";
+import hrSlide1 from "@/assets/hr-slide-1.jpg";
+import hrSlide2 from "@/assets/hr-slide-2.jpg";
+import dashboard3 from "@/assets/dashboard-3.jpg";
+import esgSlide1 from "@/assets/esg-slide-1.jpg";
+import esgSlide2 from "@/assets/esg-slide-2.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -20,7 +27,11 @@ const modules = [
     subtitle: "Enterprise Resource Planning",
     description: "End-to-end visibility into financial operations, supply chain, procurement, and asset management.",
     features: ["Financial Management & GL", "Supply Chain Optimization", "Procurement & Vendor Management", "Asset Lifecycle Tracking", "Real-time Analytics & Reporting"],
-    image: erpModule,
+    slides: [
+      { src: dashboard1, alt: "ERP Overview" },
+      { src: erpSlide1, alt: "Financial Management" },
+      { src: erpSlide2, alt: "Supply Chain" },
+    ] as CarouselSlide[],
   },
   {
     icon: Users,
@@ -28,7 +39,11 @@ const modules = [
     subtitle: "Human Capital Management",
     description: "Comprehensive people management from recruitment to retirement, powered by AI insights.",
     features: ["Talent Acquisition & Onboarding", "Performance Management", "Compensation & Benefits", "Learning & Development", "Workforce Analytics"],
-    image: hrModule,
+    slides: [
+      { src: dashboard2, alt: "HR Overview" },
+      { src: hrSlide1, alt: "Recruitment Dashboard" },
+      { src: hrSlide2, alt: "Performance Review" },
+    ] as CarouselSlide[],
   },
   {
     icon: Leaf,
@@ -36,7 +51,11 @@ const modules = [
     subtitle: "Sustainability & Compliance",
     description: "Track, measure, and report on environmental, social, and governance metrics with regulatory confidence.",
     features: ["Carbon Footprint Tracking", "ESG Score Dashboard", "Regulatory Compliance Engine", "Sustainability Reporting", "Stakeholder Disclosure"],
-    image: esgModule,
+    slides: [
+      { src: dashboard3, alt: "ESG Overview" },
+      { src: esgSlide1, alt: "Governance Dashboard" },
+      { src: esgSlide2, alt: "Sustainability Reporting" },
+    ] as CarouselSlide[],
   },
 ];
 
@@ -92,9 +111,7 @@ const Platform = () => {
                 </ul>
               </div>
               <div className={`${i % 2 === 1 ? "md:order-1" : ""}`}>
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
-                  <img src={mod.image} alt={`${mod.title} Preview`} className="w-full h-full object-cover" />
-                </div>
+                <DashboardCarousel slides={mod.slides} />
               </div>
             </motion.div>
           ))}
